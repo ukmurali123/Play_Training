@@ -1,0 +1,30 @@
+@(userList: List[models.User])
+@import helper._
+
+
+<u1 id = "userlist">
+	@for(user <- userList){
+		<li>
+			@user.getFullName
+			@user.getCompany
+			@user.getEmail
+			@user.getPassword
+			
+			@form(routes.User.delete(user.getId)){
+			<input type = "submit" value = "Delete">
+			
+			} 
+			 @form(routes.User.update(user.getId)){
+			<input type = "submit" value = "Edit">
+			
+			} 
+			
+			
+			
+			
+			</li>
+			}
+			</u1>
+			
+			
+<h1>User Created Successfully</h1>

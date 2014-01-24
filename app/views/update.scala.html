@@ -1,0 +1,19 @@
+@(userForm: Form[models.User], user: models.User)
+
+@import helper._
+
+
+
+
+
+@form(routes.User.modify(user.getId())){
+	
+	@inputText(userForm("fullName"),'_label->"FullName")
+	@inputText(userForm("company"),'_label->"Company")
+	@inputText(userForm("email"), '_label->"Email")
+	@inputPassword(userForm("password"), '_label->"Password")
+	
+	<input type = "submit" value = "Update"/>
+	
+	}
+
