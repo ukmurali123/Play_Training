@@ -8,6 +8,7 @@ import play.data.validation.Constraints.Required;
 import play.db.ebean.*;
 
 @Entity
+@Table(name= "User_Table")
 public class User extends Model {
 
 @Required
